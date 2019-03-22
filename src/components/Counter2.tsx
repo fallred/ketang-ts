@@ -14,6 +14,7 @@ class Counter extends React.Component<IProps> {
         let {number,increment, decrement, incrementDelay} = this.props;
         return (
             <div>
+                <p>counter2</p>
                <p>{number}</p>
                <button
                 onClick={increment}

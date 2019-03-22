@@ -1,4 +1,5 @@
 import * as types from '../action-types';
+import {push} from 'connected-react-router';
 export interface increment {
     type: typeof types.INCREMENT
 }
@@ -29,5 +30,9 @@ export default {
         return {
             type: types.DECREMENT
         }
+    },
+    goto(){
+        // 如何通过派发action的方式跳转路径
+        return push('/2');
     }
 }

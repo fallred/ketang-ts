@@ -7,13 +7,15 @@ interface IProps {
     increment: any,
     incrementDelay:any,
     decrement: any,
+    goto: any,
 }
 
 class Counter extends React.Component<IProps> {
     render(){
-        let {number,increment, decrement, incrementDelay} = this.props;
+        let {number,increment, decrement, incrementDelay,goto} = this.props;
         return (
             <div>
+                <p>counter1</p>
                <p>{number}</p>
                <button
                 onClick={increment}
@@ -26,6 +28,8 @@ class Counter extends React.Component<IProps> {
                 <button
                 onClick={decrement}
                >-</button>
+               <br/>
+               <button onClick={goto}>跳转到/2</button>
             </div>
         );
     }
